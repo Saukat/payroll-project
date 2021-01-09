@@ -1,0 +1,87 @@
+
+<div class="py-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card rounded-0">
+          <div class="card-header">
+            <h3 class="mb-0 text-center">Edit Payroll Details!!</h3>
+            <!-- <span class="card bg-danger text-white text-center" *ngIf="!islogin">Invalid Email and Password!!</span> -->
+          </div>
+          <div class="card-body">
+            <form [formGroup]="editPayrollForm" (ngSubmit)="onEditPayrollForm()">
+              
+              <div class="form-group">
+                <label for="">Id:
+                  
+                </label>
+                <input type="text"  class="form-control" placeholder="Enter Emp ID *" formControlName="id"/>
+              </div>
+
+
+                <div class="form-group">
+                    <label for="">Name:</label>
+                    <input type="text" class="form-control" placeholder="Enter Your Name *" formControlName="name" />
+                  </div>
+                 
+
+                  <div class="form-group">
+                    <label for="">Current Month Ctc:</label>
+                    <input type="text" class="form-control" placeholder="Enter Your monthCtc *" formControlName="totalCostToCompany" />
+                  </div>
+                  
+                  <!-- <div class="form-group">
+                      
+                      <input type="date" class="form-control" hidden formControlName="dateOfProcess" />
+                    </div> -->
+                    
+                    <div class="form-group">
+                      <label for="">Gross Salary:</label>
+                      <input type="text" class="form-control" formControlName="grossPay" />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="">net Salary:</label>
+                      <input type="text" class="form-control"  [(ngModel)]="netSal"  formControlName="netSalary" />
+                    </div>
+              
+              
+              <div class="form-group">
+                <label for="">addition:</label>
+                <input type="text"  class="form-control" (dblclick)="onDbClickForAddition($event)"   placeholder="Calculate Addition on Salary*" formControlName="addition"/>
+              </div>
+
+              <div class="form-group">
+                <label for="">Deduction:</label>
+                <input type="text"  class="form-control"  (dblclick)="onDbClickForDeduction($event)" formControlName="deduction"/>
+              </div>
+               
+              <div class="form-group">
+                <label for="">Reimbursements:</label>
+                <input type="text"  class="form-control"  placeholder="Calculate Reimbursements*" formControlName="reimbursements"/>
+              </div>
+
+              <div class="form-group">
+                <label for="">Remark:</label>
+                <input type="text" class="form-control" [(ngModel)]="date" formControlName="remark" />
+              </div>
+             
+              <div class="form-group">
+                <label for="">Status:</label>
+                <input type="text"  class="form-control"  placeholder="Enter Your Status *" formControlName="status"/>
+              </div>
+
+              
+
+             
+             
+
+              <input type="submit" style="width: 160px" class="btn btn-success"  value="Update Payroll "/>
+            </form>
+          </div>
+         
+        </div>
+      </div>
+  
+   </div>
+</div>   
+  

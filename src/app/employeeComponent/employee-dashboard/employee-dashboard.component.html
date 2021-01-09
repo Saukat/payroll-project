@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Connectix</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" (click)="employeeProfile()">Employee Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="empPaySlip">Salary slip</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <select class="nav-link" aria-label="Default select example">
+          <option selected>Select Month For PaySlip</option>
+          <option class="dropdown-item" href="">January</option>
+          <option class="dropdown-item" href="">February</option>
+          <option class="dropdown-item" href="">March</option>
+          <option class="dropdown-item" href="">April</option>
+          <option class="dropdown-item" href="">May</option>
+          <option class="dropdown-item" href="">June</option>
+          <option class="dropdown-item" href="">July</option>
+          <option class="dropdown-item" href="">August</option>
+          <option class="dropdown-item" href="">September</option>
+          <option class="dropdown-item" href="">October</option>
+          <option class="dropdown-item" href="">November</option>
+          <option class="dropdown-item" href="">December</option>
+        </select>
+        <!-- <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         PaySlip of Every Month
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        
+        </div> -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" >Logout</a>
+      </li>
+    </ul>
+   
+  </div>
+</nav>
+<router-outlet></router-outlet>

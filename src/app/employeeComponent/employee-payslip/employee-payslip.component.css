@@ -1,0 +1,6 @@
+.container{
+    border-style: solid ;
+}
+table, th, td {
+    border: 1px solid black;
+  }

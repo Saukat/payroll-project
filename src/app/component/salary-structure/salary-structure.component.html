@@ -1,0 +1,84 @@
+
+
+<div class="py-5">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card rounded-0">
+        <div class="card-header">
+          <h4 class="mb-0 text-center">Employee Salary Structure!!</h4>
+          <!-- <span class="card bg-danger text-white text-center" *ngIf="!islogin">Invalid Email and Password!!</span> -->
+        </div>
+        <div class="card-body">
+          <form [formGroup]="salaryStructure" (ngSubmit)="onsalaryStructureForm()">
+               
+               <div class="form-group">
+                  <label for="">Employee Id:</label>
+                  <input type="text" class="form-control" [(ngModel)]="id" placeholder="Enter Employee Id *" formControlName="id" />
+                </div>
+
+              
+               
+              
+
+      
+
+                <div class="form-group">
+                  <label for="">Basic:</label>
+                  <input type="text" (keyup)="basicSalryCalculation($event)" class="form-control"  placeholder="Enter Basic Salary*"  formControlName="basic"/>
+                </div>
+
+                <div class="form-group">    
+                  <label for="">HRA:</label>        
+                   <input type="text" class="form-control" [(ngModel)]="Hra"  placeholder="Enter HRA *" formControlName="hra" />
+                </div> 
+
+                <div class="form-group">
+                  <label for="">Conveyance Allowance:</label>
+                  <input type="text" class="form-control" [(ngModel)]="cAlloance"  disabled formControlName="conveyanceAllowance" />
+               </div> 
+            
+               <div class="form-group">
+                  <label for="">Other Variable Allowance:</label>
+                  <input type="text"  class="form-control" [(ngModel)]="ovAlloance" formControlName="otherAllowance"/>
+                </div>
+
+                <div class="form-group">
+                  <label for="">Gross Pay:</label>
+                  <input type="text"  class="form-control" [(ngModel)]="grossPay" formControlName="grossPay"/>
+                </div>
+
+                <div class="form-group">
+                   <label for="">Employee's Contribution to EPF</label>
+                   <input type="text" class="form-control" [(ngModel)]="empEpf" formControlName="employeeEpf" />
+                </div> 
+                <div class="form-group">
+                  <label for="">Employee's Contribution to ESI</label>
+                  <input type="text" class="form-control" [(ngModel)]="empEsi" formControlName="employeeESI" />
+               </div> 
+
+                <div class="form-group">
+                  <label for="">Net Salary:</label>
+                  <input type="text" class="form-control" [(ngModel)]="netPay" formControlName="netSalary" />
+               </div>
+
+               <div class="form-group">
+                <label for="">Employer's Contribution to EPF</label>
+                <input type="text" class="form-control" [(ngModel)]="emprEpf" formControlName="employerEpf" />
+             </div> 
+
+             <div class="form-group">
+              <label for="">Employer's Contribution to ESI</label>
+              <input type="text" class="form-control" [(ngModel)]="emprEsi" formControlName="employerESI" />
+           </div> 
+
+           <div class="form-group">
+            <label for="">Total Cost to Company</label>
+            <input type="text" class="form-control" [(ngModel)]="totalCompanyCost" formControlName="totalCostToCompany" />
+         </div> 
+                
+            <input type="submit" style="width: 160px" class="btn btn-success"  value="Upadate Salary Structure"/>
+          </form>
+        </div>
+       
+      </div>
+    </div>
